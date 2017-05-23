@@ -1,6 +1,6 @@
 #  Implement radix sort.
 
-**Constraints**
+## **Constraints**
 
 * Is the input a list?
   * Yes

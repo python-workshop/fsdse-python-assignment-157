@@ -1,15 +1,15 @@
-def build(array, base=10):
+def sort( array, base=10):
     if array is None:
-        return False
+        raise TypeError('array cannot be None')
     if not array:
         return []
-    ele = max(array)
-    dig = len(str(abs(ele)))
+    max_element = max(array)
+    max_digits = len(str(abs(max_element)))
     curr_array = array
-    for digit in range(dig):
+    for digit in range(max_digits):
         buckets = [[] for _ in range(base)]
         for item in curr_array:
-            buckets[(item//(base**digit))%base].append(item)
+            buckets[(item // (base ** digit)) % base].append(item)
         curr_array = []
         for bucket in buckets:
             curr_array.extend(bucket)
